@@ -209,7 +209,7 @@ Once you have a public source repository, set `repoUrl` in `website/release.js`.
 
 - **Netlify:** drag the `website` folder onto https://app.netlify.com/drop.
 - **Cloudflare Pages:** create a project, pick *Direct upload*, and upload `website/`.
-- **GitHub Pages:** push the repo, then go to *Settings → Pages* and deploy from a branch, with the folder set to `/website` (or copy it to `/docs`). Each installer is about 2 MB, far under GitHub's 100 MB per-file limit.
+- **GitHub Pages (how the official site is published):** the workflow in `.github/workflows/pages.yml` deploys `website/` whenever it changes on `main`. In the repo, *Settings → Pages → Source* must be set to **GitHub Actions**. Each installer is about 2 MB, far under GitHub's 100 MB per-file limit.
 
 If you'd rather host the installers on GitHub Releases, upload the two files there and change each `url` in `release.js` to the release-asset URL.
 
