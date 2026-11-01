@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aktobly — Write it messy. Send it polished.</title>
+  <meta name="description" content="Aktobly is a free, open-source Windows writing assistant. Press Ctrl+K anywhere to turn quick English or Saudi Arabic into polished emails and messages — powered by Meta Llama running locally on your PC." />
+  <meta name="theme-color" content="#0a0a0d" />
+  <meta property="og:title" content="Aktobly — free, private AI writing assistant for Windows" />
+  <meta property="og:description" content="Press Ctrl+K anywhere. Turn rough English or Arabic into ready-to-send messages with Meta Llama, 100% on your PC." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="release.js"></script>
+</head>
+<body>
+  <a class="sr-only" href="#main">Skip to content</a>
+
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="Aktobly home">
+        <img src="favicon.svg" width="26" height="26" alt="" />
+        Aktobly
+      </a>
+      <nav class="nav-links" aria-label="Main">
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="btn btn-ghost btn-sm" data-repo hidden href="#" target="_blank" rel="noopener">Source</a>
+        <a class="btn btn-primary btn-sm" href="#download">Download</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="top">
+      <div class="container">
+        <span class="pill"><b>Free &amp; open source</b> Version <span data-version>0.1.0</span> for Windows</span>
+        <h1>Write it messy.<br /><span class="grad">Send it polished.</span></h1>
+        <p class="lede">
+          Press <kbd>Ctrl</kbd> <kbd>K</kbd> in any app. Type in quick English, broken English or
+          <span class="ar" lang="ar">عربي سعودي</span> — Aktobly turns it into a ready-to-send email or message,
+          with Meta Llama running entirely on your PC.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" data-dl="nsis" href="#download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.1 10.4 4v7.1H3zm8.3-1.2L21 2.5v8.6h-9.7zM3 12.9h7.4V20L3 18.9zm8.3 0H21v8.6l-9.7-1.4z"/></svg>
+            Download for Windows <small data-size="nsis"></small>
+          </a>
+          <a class="btn btn-ghost btn-lg" href="#how">See how it works</a>
+        </div>
+        <p class="hero-meta"><span>Windows 10 &amp; 11 (64-bit)</span><span>No account</span><span>No subscription</span></p>
+        <p class="os-note" id="os-note">Aktobly is currently available for Windows only. You can still download it here for a Windows PC.</p>
+
+        <!-- Animated product demo (decorative) -->
+        <div class="demo" aria-hidden="true">
+          <div class="desktop">
+            <div class="mail">
+              <div class="mail-bar"><i></i><i></i><i></i><span>New message</span></div>
+              <div class="mail-row">To <b>careers@company.sa</b></div>
+              <div class="mail-row">Subject <b id="mail-subject">&nbsp;</b></div>
+              <div class="mail-body">
+                <div class="line" style="width: 92%"></div>
+                <div class="line" style="width: 78%"></div>
+                <div class="line" style="width: 85%"></div>
+                <div class="line" style="width: 40%"></div>
+              </div>
+              <div class="mail-send">Send</div>
+            </div>
+
+            <div class="panel">
+              <div class="p-head">
+                <img src="favicon.svg" width="16" height="16" alt="" />
+                <b>Aktobly</b><span class="p-chip">llama3.1:8b</span><span class="x">✕</span>
+              </div>
+              <div class="p-input" id="demo-input"><span class="ph">Write anything, in any language...</span></div>
+              <div class="p-controls">
+                <div class="p-select" id="demo-type">Professional Email</div>
+                <div class="p-select" id="demo-lang">Arabic — Saudi Professional</div>
+                <div class="p-select" id="demo-tone">Professional</div>
+                <div class="p-gen" id="demo-gen">✦ Generate</div>
+              </div>
+              <div class="p-output" id="demo-output"></div>
+              <div class="p-actions"><span class="p-copy" id="demo-copy">Copy</span><span>↻</span><span>✂ Shorter</span><span>✎ Improve</span></div>
+              <div class="p-foot"><span class="dot"></span>Ollama connected · llama3.1:8b<span class="k">Ctrl+K</span></div>
+            </div>
+          </div>
+          <p class="demo-caption">Aktobly floats over the app you're in. Copy the result, paste it, press Ctrl+K to hide.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="strip">
+      <div class="container strip-inner">
+        <span class="lbl">Works on top of any app:</span>
+        <span>Email</span><span>Web browsers</span><span>Chat apps</span><span>Office documents</span><span>Code editors</span><span>CRMs &amp; ticketing</span>
+      </div>
+    </div>
+
+    <!-- ================= EXAMPLES ================= -->
+    <section class="section" id="examples">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Real examples</span>
+          <h2>From rough draft to ready-to-send.</h2>
+          <p>Unedited output from <code>llama3.1:8b</code> on a regular laptop. Aktobly keeps your meaning and never invents qualifications, names or promises.</p>
+        </div>
+        <div class="examples">
+          <article class="ex">
+            <div class="ex-in">
+              <div class="ex-label">You type</div>
+              <p>hey wanted to ask if you guys have any cloud engineer jobs available im a new grad thanks</p>
+            </div>
+            <div class="ex-tags"><span class="tag">Professional Email</span><span class="tag">Arabic — Saudi Professional</span><span class="tag">Professional</span></div>
+            <div class="ex-out" dir="rtl" lang="ar">الموضوع: طلب وظيفة مهندس حوسبة سحابية
+
+السلام عليكم ورحمة الله،
+
+أتمنى أن تكونوا بخير. أودّ أن أسألكم عن توفر وظائف مهندس حوسبة سحابية في الشركة. أنا حديث التخرج، ويسعدني أن أكون جزءًا من فريقكم.
+
+شاكر ومقدّر تفهمكم.
+
+تحياتي،</div>
+          </article>
+
+          <article class="ex">
+            <div class="ex-in">
+              <div class="ex-label">You type</div>
+              <p>yo just checking if theres any update on the meeting</p>
+            </div>
+            <div class="ex-tags"><span class="tag">Professional Email</span><span class="tag">English — Professional</span><span class="tag">Professional</span></div>
+            <div class="ex-out">Subject: Update on Meeting
+
+Hello,
+
+I was just checking if there were any updates regarding our meeting. Could you please let me know if anything has changed or if we are still scheduled as planned?
+
+Thank you for your time.
+
+Best regards,</div>
+          </article>
+
+          <article class="ex">
+            <div class="ex-in">
+              <div class="ex-label">You type</div>
+              <p dir="rtl" lang="ar">هلا والله بس حبيت اسأل اذا فيه تحديث بخصوص طلبي يعطيكم العافية</p>
+            </div>
+            <div class="ex-tags"><span class="tag">Professional Email</span><span class="tag">Arabic — Formal (MSA)</span><span class="tag">Professional</span></div>
+            <div class="ex-out" dir="rtl" lang="ar">الموضوع: استفسار بخصوص طلبي
+
+السلام عليكم ورحمة الله،
+
+أتمنى أن تكونوا بخير. أود سؤالًا عن حالة طلبي، فهل هناك تحديثات جديدة؟ شكراً لك على مساعدتك.
+
+مع خالص التحية،</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FEATURES ================= -->
+    <section class="section" id="features" style="padding-top: 0">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Features</span>
+          <h2>Everything you need. Nothing in your way.</h2>
+          <p>A tiny, keyboard-first panel that's there the second you need it and gone the second you don't.</p>
+        </div>
+        <div class="features">
+          <div class="feat">
+            <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M8 14h8"/></svg></div>
+            <h3>One shortcut, every app</h3>
+            <p>A true system-wide hotkey. <kbd>Ctrl</kbd> <kbd>K</kbd> opens Aktobly over Chrome, Outlook, VS Code or anything else — and hides it again. Fully configurable.</p>
+          </div>
+          <div class="feat">
+            <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 8 6 6M4 14l6-6 2-3M2 5h12M7 2h1M22 22l-5-10-5 10M14 18h6"/></svg></div>
+            <h3>Truly bilingual</h3>
+            <p>Write in English, Arabic or a mix. Get Modern Standard Arabic, natural Saudi business Arabic, Saudi casual, or polished English — rendered right-to-left properly.</p>
+          </div>
+          <div class="feat">
+            <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+            <h3>Private by design</h3>
+            <p>Runs on Meta Llama through Ollama on your own computer. No cloud, no account, no telemetry, no history. Works offline.</p>
+          </div>
+          <div class="feat">
+            <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="m4 4 8 8 8-8"/></svg></div>
+            <h3>8 output types</h3>
+            <p>Pick exactly what you're writing — each type has its own instructions.</p>
+            <div class="chips"><span>Professional email</span><span>Casual email</span><span>WhatsApp / chat</span><span>Formal letter</span><span>Translation</span><span>Grammar fix</span><span>Rewrite</span><span>Summary</span></div>
+          </div>
+          <div class="feat">
+            <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 9 9"/><path d="M12 7v5l3 3"/><path d="M16 3h5v5"/></svg></div>
+            <h3>7 tones that actually differ</h3>
+            <p>Formal, Professional, Friendly, Casual, Polite, Direct or Concise. Then refine in one click: shorter, improved, more formal or friendlier.</p>
+          </div>
+          <div class="feat">
+            <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="14" height="14" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg></div>
+            <h3>Copy, paste, done</h3>
+            <p>Streaming results you can edit before copying. One click (or <kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>C</kbd>) to copy. Lives quietly in your tray, ~2&nbsp;MB to install.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HOW ================= -->
+    <section class="section" id="how" style="padding-top: 0">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">How it works</span>
+          <h2>Three keystrokes from thought to sent.</h2>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <div class="keys"><kbd>Ctrl</kbd> + <kbd>K</kbd></div>
+            <h3>Summon</h3>
+            <p>From any window. Aktobly appears in the top-right corner of your active screen, cursor ready. Your app stays visible behind it.</p>
+          </div>
+          <div class="step">
+            <div class="keys"><kbd>Ctrl</kbd> + <kbd>Enter</kbd></div>
+            <h3>Write &amp; generate</h3>
+            <p>Type the way you think. Choose output type, language and tone — Aktobly remembers your last choice — and watch it write.</p>
+          </div>
+          <div class="step">
+            <div class="keys"><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd> &nbsp;→&nbsp; <kbd>Esc</kbd></div>
+            <h3>Copy &amp; go</h3>
+            <p>Copy the result, press Esc, and you're back in your app — ready to paste. The whole round trip takes seconds.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PRIVACY ================= -->
+    <section class="section-sm" id="privacy">
+      <div class="container">
+        <div class="privacy-band">
+          <div>
+            <span class="eyebrow">Privacy</span>
+            <h2>Your words never leave your computer.</h2>
+            <p>Most AI writing tools send everything you type to someone else's servers. Aktobly doesn't have servers. The AI model runs on your own machine.</p>
+            <div class="flow"><span>Your text</span><em>→</em><span>Aktobly</span><em>→</em><span>Ollama on 127.0.0.1</span><em>→</em><span>Llama on your PC</span></div>
+          </div>
+          <ul class="checks">
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>No account, sign-up or email address — ever.</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>No analytics, telemetry or crash reporting.</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>No writing history is stored.</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Never reads other apps or records keystrokes — only what you type into Aktobly.</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Clear warning if you point it at a remote Ollama server.</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Open source (MIT) — verify every claim yourself.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= DOWNLOAD ================= -->
+    <section class="section" id="download">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Download</span>
+          <h2>Get Aktobly — free, forever.</h2>
+          <p>Takes about five minutes the first time, mostly while the AI model downloads.</p>
+        </div>
+        <div class="dl-grid">
+          <div class="card dl-main">
+            <h3>Aktobly for Windows <span class="ver">v<span data-version>0.1.0</span> · <span data-date></span></span></h3>
+            <p>Installs per-user in seconds — no administrator rights needed. Starts quietly in your system tray.</p>
+            <div class="dl-buttons">
+              <a class="btn btn-primary btn-lg" data-dl="nsis" href="#">
+                <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-5-5m5 5 5-5M5 21h14"/></svg> Download installer (.exe)</span>
+                <small data-size="nsis"></small>
+              </a>
+              <a class="btn btn-ghost" data-dl="msi" href="#">
+                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-5-5m5 5 5-5M5 21h14"/></svg> MSI package for IT deployment (.msi)</span>
+                <small data-size="msi"></small>
+              </a>
+            </div>
+            <div class="hash">
+              SHA-256 of the installer
+              <div class="hash-row"><code data-sha="nsis">—</code><button class="copy-btn" data-copy-sha="nsis" type="button">Copy</button></div>
+              <div style="margin-top: 6px">Verify in PowerShell: <code style="background:none;border:0;padding:0">Get-FileHash .\<span data-file="nsis">Aktobly-setup.exe</span></code></div>
+            </div>
+            <ul class="reqs">
+              <li><b>Operating system</b>Windows 10 or 11, 64-bit</li>
+              <li><b>Memory</b>8 GB RAM minimum, 16 GB recommended</li>
+              <li><b>Disk space</b>~10 MB app + 2–5 GB for a model</li>
+              <li><b>Also required</b>Ollama (free) + a Meta Llama model</li>
+            </ul>
+          </div>
+
+          <div class="card setup">
+            <h3>First-time setup</h3>
+            <p>Aktobly uses Ollama to run Meta Llama locally. Open PowerShell and run:</p>
+            <ol>
+              <li>
+                <div><b>Install Ollama</b><p>Or download it from ollama.com.</p>
+                  <div class="cmd"><code>winget install Ollama.Ollama</code><button class="copy-btn" type="button" data-copy>Copy</button></div>
+                </div>
+              </li>
+              <li>
+                <div><b>Download a Llama model</b><p>One-time, about 4.9 GB.</p>
+                  <div class="cmd"><code>ollama pull llama3.1:8b</code><button class="copy-btn" type="button" data-copy>Copy</button></div>
+                </div>
+              </li>
+              <li>
+                <div><b>Run the Aktobly installer</b><p>Aktobly starts in your tray and finds your model automatically.</p></div>
+              </li>
+              <li>
+                <div><b>Press <kbd>Ctrl</kbd> <kbd>K</kbd></b><p>That's it. Start writing.</p></div>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top: 20px">
+          <h3 style="font-size: 18px">Which model should I use?</h3>
+          <div class="table-wrap">
+            <table class="models">
+              <thead><tr><th>Model</th><th>Download</th><th>RAM</th><th>Best for</th></tr></thead>
+              <tbody>
+                <tr><td>llama3.2:3b</td><td>2.0 GB</td><td>8 GB</td><td>Older or low-memory laptops; fastest</td></tr>
+                <tr><td>llama3.1:8b <span class="rec">Recommended</span></td><td>4.9 GB</td><td>16 GB</td><td>Best balance of quality and speed for English and Arabic</td></tr>
+                <tr><td>llama3.3:70b</td><td>43 GB</td><td>64 GB+</td><td>Workstations with a large GPU; highest quality</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section class="section" id="faq" style="padding-top: 0">
+      <div class="container">
+        <div class="section-head center">
+          <span class="eyebrow">FAQ</span>
+          <h2>Questions, answered.</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>Is Aktobly really free?</summary>
+            <div><p>Yes. Aktobly is free and open-source software under the MIT license — free for personal and commercial use, with no trials, ads, upsells or subscriptions. There's no server bill to pass on to you because the AI runs on your own computer.</p></div>
+          </details>
+          <details>
+            <summary>Does it need an internet connection?</summary>
+            <div><p>Only to download Ollama and a model the first time. After that Aktobly works completely offline.</p></div>
+          </details>
+          <details>
+            <summary>Windows shows “Windows protected your PC” when I run the installer.</summary>
+            <div>
+              <p>That's Microsoft SmartScreen, which warns about new apps that aren't code-signed with a paid certificate yet. Click <b>More info → Run anyway</b>.</p>
+              <p>To be sure the file is genuine, compare its SHA-256 checksum (shown in the download section) with <code>Get-FileHash</code> in PowerShell. You can also build Aktobly yourself from source.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Is my writing stored or sent anywhere?</summary>
+            <div><p>No. Text goes from Aktobly to Ollama on your own machine (<code>127.0.0.1</code>) and nowhere else. Aktobly keeps no history. The only thing it saves is your settings file. If you deliberately connect it to an Ollama server on another computer, it shows a warning that your text will be sent there.</p></div>
+          </details>
+          <details>
+            <summary>Which AI models does it use?</summary>
+            <div>
+              <p>Meta's Llama models running in Ollama — <code>llama3.2:3b</code>, <code>llama3.1:8b</code> or <code>llama3.3:70b</code>, whichever you have installed. Aktobly picks an 8B model automatically if available and never substitutes a non-Llama model.</p>
+              <p>Models are downloaded by you from Ollama and are subject to Meta's Llama Community License.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Ctrl+K no longer works in Chrome / VS Code / Outlook.</summary>
+            <div><p>A global shortcut takes the key combination system-wide, so other apps can't receive it while Aktobly is running. If you rely on Ctrl+K elsewhere, open Aktobly's Settings and pick another shortcut such as <code>Ctrl+Alt+K</code> or <code>Ctrl+Shift+Space</code>.</p></div>
+          </details>
+          <details>
+            <summary>How good is the Arabic?</summary>
+            <div><p>With <code>llama3.1:8b</code>, English output is excellent and Arabic is good — natural greetings, correct terminology, proper right-to-left layout. Occasionally a phrase may sound slightly unnatural; use <b>Regenerate</b> or <b>Improve</b>, or edit before copying. Larger Llama models produce noticeably better Arabic.</p></div>
+          </details>
+          <details>
+            <summary>Is there a Mac or Linux version?</summary>
+            <div><p>Not yet. Aktobly is built with Tauri, which supports macOS and Linux, so it's on the roadmap. Windows comes first.</p></div>
+          </details>
+          <details>
+            <summary>How do I uninstall it?</summary>
+            <div><p>Right-click the tray icon → <b>Quit</b>, then remove Aktobly from <b>Settings → Apps → Installed apps</b>. To also remove your preferences, delete <code>%APPDATA%\com.aktobly.app</code>. Ollama and your models are separate and stay installed unless you remove them too.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CHANGELOG ================= -->
+    <section class="section-sm" id="changelog" style="padding-top: 0">
+      <div class="container">
+        <div class="section-head center"><span class="eyebrow">Changelog</span><h2>What's new</h2></div>
+        <div class="changelog">
+          <h3>v<span data-version>0.1.0</span> <span data-date></span></h3>
+          <ul>
+            <li>First public release.</li>
+            <li>System-wide Ctrl+K popup with configurable shortcut and conflict fallback.</li>
+            <li>Streaming generation with Meta Llama via Ollama, with Stop, Retry and Regenerate.</li>
+            <li>8 output types, 5 target languages including Saudi Professional and Saudi Casual Arabic, and 7 tones.</li>
+            <li>One-click Shorter, Improve, More formal and More friendly refinements.</li>
+            <li>System tray, launch at startup, light/dark themes and multi-monitor, high-DPI placement.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA ================= -->
+    <section class="cta">
+      <div class="container">
+        <h2>Stop rewriting. Start sending.</h2>
+        <p>Free, private and two megabytes away.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" data-dl="nsis" href="#download">Download for Windows <small data-size="nsis"></small></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="#top"><img src="favicon.svg" width="22" height="22" alt="" /> Aktobly</a>
+          <p style="margin-top: 12px; max-width: 280px">A free, private AI writing assistant for Windows. Made for people who write in two languages.</p>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <ul><li><a href="#features">Features</a></li><li><a href="#download">Download</a></li><li><a href="#changelog">Changelog</a></li><li><a href="#faq">FAQ</a></li></ul>
+        </div>
+        <div>
+          <h4>Open source</h4>
+          <ul><li><a data-repo hidden href="#" target="_blank" rel="noopener">Source code</a></li><li><a href="license.html">MIT License</a></li><li><a data-repo-issues hidden href="#" target="_blank" rel="noopener">Report an issue</a></li></ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul><li><a href="privacy.html">Privacy policy</a></li><li><a href="license.html">License &amp; terms</a></li></ul>
+        </div>
+      </div>
+      <p class="fine">
+        © <span data-year>2026</span> The Aktobly contributors. Released under the MIT License.<br />
+        Aktobly is an independent project and is not affiliated with or endorsed by Meta Platforms, Inc. or Ollama. Llama is a trademark of Meta Platforms, Inc.;
+        Windows is a trademark of Microsoft Corporation. This website uses no cookies, analytics or third-party resources.
+      </p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
