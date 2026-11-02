@@ -12,7 +12,7 @@
     "app:build": "tauri build",
     "icons": "tauri icon app-icon.svg",
     "site:prepare": "node scripts/prepare-site.mjs",
-    "site:serve": "vite website --port 4321"
+    "site:serve": "node scripts/serve-site.mjs"
   },
   "dependencies": {
     "@tauri-apps/api": "^2.12.4",
